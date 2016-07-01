@@ -1,6 +1,6 @@
 # 用Promise打开新世界的大门
 
-![promise](./promise.jpg)
+![promise](./img/promise.jpg)
 
 ## 异步编程
 
@@ -49,7 +49,7 @@ $(myButton).on('click', myClickHandler);
 
 `Callbacks`跟`Listeners`已经可以为我们解决很多问题了，为何还需要`Promise`。<input data-trigger="hell" type="button" value="Why?">
 
-![hell](./hell.jpg)
+![hell](./img/hell.jpg)
 
 <script type="text/javascript">
 (function(){
@@ -66,19 +66,19 @@ $(myButton).on('click', myClickHandler);
 
 除了`JavaScript`也有其他语言，使用`Promise`。
 
-![github](./github.png)
+![github](./img/github.png)
 
 一些开源的库，例如`jQuery`，也实现了自己的`Promise`。
 
-![jquery](./jquery.png)
+![jquery](./img/jquery.png)
 
-![zepto](./zepto.png)
+![zepto](./img/zepto.png)
 
 大家的实现方法，其实并不一样。比如接口也会存在差异。因此我们就需要统一的规范。
 
 Promises/A+是一种异步编程规范，es6部署的`Promise`是遵循这种规范的。
 
-![promisesaplus](./promisesaplus.jpg)
+![promisesaplus](./img/promisesaplus.jpg)
 
 [@see Promises/A+](https://promisesaplus.com/)
 
@@ -127,7 +127,7 @@ Promises/A+是一种异步编程规范，es6部署的`Promise`是遵循这种规
 
 我们用流程图表示，其实就是，这么一回事。
 
-![status](./status.png)
+![status](./img/status.png)
 
 `Promise`的实例接收一个参数，类型必须为函数。而这个函数会立即执行。
 
@@ -158,9 +158,9 @@ console.log('step3');
 promise.then(onFulfilled, onRejected)
 ````
 
-![example1](./example1.png)
+![example1](./img/example1.png)
 
-![example2](./example2.png)
+![example2](./img/example2.png)
 
 `then`方法都是异步的。
 
@@ -221,7 +221,7 @@ sleep(100)
 
 #### 这个特性非常有趣。<input data-trigger="then" type="button" value="show">
 
-![then](./then.png)
+![then](./img/then.png)
 
 <script type="text/javascript">
 (function(){
@@ -247,7 +247,7 @@ sleep(100)
 
 ## 更复杂的逻辑
 
-![task](./task.png)
+![task](./img/task.png)
 
 ````
 var task = (condition) => new Promise((resolve, reject) => condition == 'error' ? reject() : resolve());
@@ -274,13 +274,13 @@ var task2 = task1.then(() => {
 * catch
 * Promise.all
 
-![all](./all.jpg)
+![all](./img/all.jpg)
 
 `promise.catch(onRejected)`类似`promise.then(null, onRejected)`的shortcut。
 
-![catch1](./catch1.png)
+![catch1](./img/catch1.png)
 
-![catch2](./catch2.png)
+![catch2](./img/catch2.png)
 
 ## 情景分析
 
@@ -296,27 +296,27 @@ var task2 = task1.then(() => {
 
 这是问题1的例子。
 
-![sync](./sync.png)
+![sync](./img/sync.png)
 
 这是问题2的例子。
 
-![when](./when.png)
+![when](./img/when.png)
 
 `康熙一期`
 
-![kangxi](./kangxi.png)
+![kangxi](./img/kangxi.png)
 
 对于问题3。
 
-![mock](./mock.png)
+![mock](./img/mock.png)
 
 `康熙一期`
 
-![ajax](./ajax.png)
+![ajax](./img/ajax.png)
 
 `康熙一期`的流程图。
 
-![mypage](./mypage.png)
+![mypage](./img/mypage.png)
 
 ## 快速开始
 
@@ -333,4 +333,4 @@ Node 4.0 支持es6 与 Promise
 
 [@see promisify](https://mp.weixin.qq.com/s?__biz=MzA4NjE3MDg4OQ==&mid=2650963217&idx=1&sn=242efadbfe1964e9c04865ba32356afb&scene=1&srcid=0419cXRhv9Mwwd72p4AGQMgp&key=b28b03434249256be7c49a4532995cdb3dac61e7b28d8fbed753e3eeb6193eb67efd1badc2d0c2ec3a358c31609840a7&ascene=0&uin=MjA1ODk2NDI0MA%3D%3D&devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.11.3+build(15D21)&version=11020201&pass_ticket=I7GmJ2rqKEv0SCQMZwZ8IOT2bMfd1UVaNUt9vMG64yrl7RQzmbEdm9qpgbt5Fq%2BK)
 
-![get](./get.jpg)
+![get](./img/get.jpg)
